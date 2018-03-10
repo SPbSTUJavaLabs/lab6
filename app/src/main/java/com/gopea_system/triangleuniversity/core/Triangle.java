@@ -20,7 +20,6 @@ public class Triangle {
     }
 
     public Canvas draw(Canvas canvas) {
-        Log.d("gopea.test","test");
         Paint paint = new Paint();
         for (int i = 0; i < 2; i++) {
             canvas.drawLine(points[i].getX(), points[i].getY(), points[i + 1].getX(), points[i + 1].getY(), paint);
