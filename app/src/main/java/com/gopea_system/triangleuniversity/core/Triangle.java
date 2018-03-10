@@ -3,6 +3,7 @@ package com.gopea_system.triangleuniversity.core;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 /**
  * Created by Андрей on 09.03.2018.
@@ -19,13 +20,12 @@ public class Triangle {
     }
 
     public Canvas draw(Canvas canvas) {
+        Log.d("gopea.test","test");
         Paint paint = new Paint();
         for (int i = 0; i < 2; i++) {
-            canvas.drawLine(points[i].getX(), points[i].getY(), points[i + 1].getX(), points[i +
-                    1].getY(), paint);
+            canvas.drawLine(points[i].getX(), points[i].getY(), points[i + 1].getX(), points[i + 1].getY(), paint);
         }
-        canvas.drawLine(points[0].getX(), points[0].getY(), points[2].getX(), points[2]
-                .getY(), paint);
+        canvas.drawLine(points[0].getX(), points[0].getY(), points[2].getX(), points[2].getY(), paint);
         return canvas;
     }
 }
