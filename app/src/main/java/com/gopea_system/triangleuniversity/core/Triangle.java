@@ -19,9 +19,13 @@ public class Triangle {
     }
 
     public Canvas draw(Canvas canvas) {
+        Paint paint = new Paint();
         for (int i = 0; i < 2; i++) {
-            canvas.drawLine(points[i].getX(), points[i].getY(), points[i + 1].getX(), points[i + 1].getY(), new Paint(1));
+            canvas.drawLine(points[i].getX(), points[i].getY(), points[i + 1].getX(), points[i +
+                    1].getY(), paint);
         }
+        canvas.drawLine(points[0].getX(), points[0].getY(), points[2].getX(), points[2]
+                .getY(), paint);
         return canvas;
     }
 }
